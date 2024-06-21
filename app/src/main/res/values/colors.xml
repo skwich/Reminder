@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bgColor">#0F7B93</color>
+    <color name="colorText">#fff</color>
+    <color name="roundedLayoutColor">#142228</color>
+    <color name="inputFieldColor">#0F7990</color>
+    <color name="gradStartColor">#48ACFF</color>
+    <color name="gradEndColor">#0D4A7D</color>
+</resources>

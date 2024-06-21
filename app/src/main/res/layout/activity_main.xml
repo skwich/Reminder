@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/messageWhenNoTasks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/messageWhenNoTasks"
+        android:textAlignment="center"
+        android:textColor="@color/colorText"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/addTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/cyan_plus_icon"
+        app:layout_constraintBottom_toTopOf="@+id/layoutMainMenuBottom"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutMainMenuBottom"
+        android:layout_width="match_parent"
+        android:layout_height="122dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="26dp"
+        android:background="@drawable/gradient"
+        >
+
+        <FrameLayout
+            android:id="@+id/taskButton"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/bottom_button">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#142228"
+                android:src="@drawable/fact_check"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ЗАДАЧИ"
+                android:textSize="14dp"
+                android:textColor="@color/colorText"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/categoryButton"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:background="@drawable/bottom_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/historyButton"
+            app:layout_constraintStart_toEndOf="@+id/taskButton"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#142228"
+                android:src="@drawable/category_icon"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="КАТЕГОРИИ"
+                android:textSize="14dp"
+                android:textColor="@color/colorText"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/historyButton"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:background="@drawable/bottom_button"
+            android:layout_marginRight="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#142228"
+                android:src="@drawable/history_icon"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ИСТОРИЯ"
+                android:textSize="14dp"
+                android:textColor="@color/colorText"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"/>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

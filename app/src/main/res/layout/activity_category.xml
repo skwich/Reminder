@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    tools:context=".Category">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="МОИ КАТЕГОРИИ"
+        android:textColor="@color/colorText"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/myCategoryList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:listitem="@layout/category_item"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutMainMenuBottom"
+        android:layout_width="match_parent"
+        android:layout_height="122dp"
+        android:background="@drawable/gradient"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="26dp">
+
+        <FrameLayout
+            android:id="@+id/taskButton"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/bottom_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:background="#142228"
+                android:scaleType="center"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:src="@drawable/fact_check" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="ЗАДАЧИ"
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:textSize="14dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/categoryButton"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:background="@drawable/bottom_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/historyButton"
+            app:layout_constraintStart_toEndOf="@+id/taskButton"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:background="#142228"
+                android:scaleType="center"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:src="@drawable/category_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="КАТЕГОРИИ"
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:textSize="14dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/historyButton"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:layout_marginRight="30dp"
+            android:background="@drawable/bottom_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:background="#142228"
+                android:scaleType="center"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:src="@drawable/history_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="ИСТОРИЯ"
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:textSize="14dp" />
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

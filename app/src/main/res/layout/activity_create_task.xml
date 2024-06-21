@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    tools:context=".CreateTask">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="НОВАЯ ЗАДАЧА"
+        android:textColor="@color/colorText"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:text="НАЗВАНИЕ:"
+        android:textColor="@color/colorText"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+    <EditText
+        android:id="@+id/taskName"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/input_field"
+        android:textColor="@color/colorText"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:text="ДАТА:"
+        android:textColor="@color/colorText"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taskName" />
+
+
+    <Button
+        android:id="@+id/taskData"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/input_field"
+        android:textColor="@color/colorText"
+        android:textSize="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:text="КАТЕГОРИЯ:"
+        android:textColor="@color/colorText"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taskData" />
+
+    <Button
+        android:id="@+id/taskCategory"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/input_field"
+        android:hint="Без категории"
+        android:textAlignment="textStart"
+        android:textColorHint="@color/colorText"
+        android:textSize="17dp" />
+
+    <ListView
+        android:id="@+id/categoryList"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintTop_toBottomOf="@+id/taskCategory"
+        android:background="@drawable/input_field"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="10dp"
+        android:translationZ="10dp"
+        android:visibility="invisible"/>
+
+<!--    <FrameLayout-->
+<!--        android:id="@+id/category"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--        -->
+
+<!--        &lt;!&ndash;        <ImageView&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:id="@+id/arrow_down"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_gravity="end|center"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_marginRight="50dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:src="@drawable/arrow_down"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:translationZ="10dp" />&ndash;&gt;-->
+<!--    </FrameLayout>-->
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/taskCategory">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:text="Прислать напоминание"
+            android:layout_gravity="center"
+            android:textColor="@color/colorText"
+            android:textSize="17dp" />
+
+        <CheckBox
+            android:id="@+id/checkboxEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginRight="100dp" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/createTaskButton"
+        android:layout_width="158dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/rounded_button"
+        android:text="СОЗДАТЬ"
+        android:textColor="@color/colorText"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/layoutMainMenuBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutMainMenuBottom"
+        android:layout_width="match_parent"
+        android:layout_height="122dp"
+        android:background="@drawable/gradient"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="26dp">
+
+        <FrameLayout
+            android:id="@+id/taskButton"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/bottom_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:background="#142228"
+                android:scaleType="center"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:src="@drawable/fact_check" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="ЗАДАЧИ"
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:textSize="14dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/categoryButton"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:background="@drawable/bottom_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/historyButton"
+            app:layout_constraintStart_toEndOf="@+id/taskButton"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:background="#142228"
+                android:scaleType="center"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:src="@drawable/category_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="КАТЕГОРИИ"
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:textSize="14dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/historyButton"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:layout_marginRight="30dp"
+            android:background="@drawable/bottom_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:background="#142228"
+                android:scaleType="center"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:src="@drawable/history_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="ИСТОРИЯ"
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:textSize="14dp" />
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

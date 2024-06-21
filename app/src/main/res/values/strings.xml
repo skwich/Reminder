@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Reminder</string>
+    <string name="messageWhenNoTasks">НЕТ ТЕКУЩИХ ЗАДАЧ\n\n\nЧТОБЫ СОЗДАТЬ ЗАДАЧУ,\nНАЖМИТЕ НА ПЛЮС</string>
+    <string name="messageWhenNoHistoryTasks">ИСТОРИЯ\nВЫПОЛНЕННЫХ\nЗАДАЧ ПУСТА</string>
+    <string name="removeTask">Удалить задачу?</string>
+    <string name="removeAllSuccessTasks">Удалить все выполненные задачи?</string>
+</resources>
