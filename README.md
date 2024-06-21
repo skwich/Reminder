@@ -5,9 +5,9 @@
 <p float="left">
   <img src="https://github.com/skwich/Reminder/blob/master/github/1.png" width="250" />
   <img src="https://github.com/skwich/Reminder/blob/master/github/2.png" width="250" /> 
-  <img src="https://github.com/skwich/Reminder/blob/master/github/3.png" width="250" />
-  <img src="https://github.com/skwich/Reminder/blob/master/github/4.png" width="250" />
   <img src="https://github.com/skwich/Reminder/blob/master/github/5.png" width="250" />
+  <img src="https://github.com/skwich/Reminder/blob/master/github/4.png" width="250" />
+  <img src="https://github.com/skwich/Reminder/blob/master/github/3.png" width="250" />
 </p>
 <h2>Дополнительные ссылки</h2>
 <p>Отчёт: <a href="https://urfume-my.sharepoint.com/:w:/g/personal/artem_zhilin_urfu_me/ERZbBJzI9eFFuaPScELWgPQBIaAByoe2TFsYXqzeGYvVLw?e=Y2zFSa">ссылка</a></p>
